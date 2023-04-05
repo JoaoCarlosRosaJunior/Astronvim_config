@@ -22,8 +22,13 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
-    ["<leader>a"] = { "<cmd> echo 'Hello World!'<cr>", desc = "Saying Hello World" },
-    ["<leader>tt"] = { "<cmd>split | resize 20 | term<cr>", desc = "Create terminal with size 20" },
+
+    ["<A-h>"] = { "<cmd>bprevious<cr>", desc = "Previous Buffer" },
+    ["<A-l>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
+
+    ["<leader>c"] = { false }, -- will be used for code related functionalities
+    ["<leader>o"] = { "<cmd>only<cr>", desc = "Only display current window" },
+    ["<leader>q"] = { "<C-w>q", desc = "Quit current window" },
   },
   t = {
     -- setting a mapping to false will disable it
